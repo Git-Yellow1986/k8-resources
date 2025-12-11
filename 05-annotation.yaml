@@ -5,9 +5,8 @@ metadata:
   annotations:
     imagerigestry: "https://dockerhub.com"
     buildURL: "https://jenkins.com/job/1234"
-  
   spec:
   containers:
-    - name: nginx
-      image: nginx
+  - name: nginx
+    image: nginx
       
