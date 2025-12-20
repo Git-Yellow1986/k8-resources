@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: annotations
+  name: annotations # for extra information
   annotations:
     imagerigestry: "https://dockerhub.com"
     buildURL: "https://jenkins.com/job/1234.com"
