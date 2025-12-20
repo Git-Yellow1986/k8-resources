@@ -7,10 +7,10 @@ spec:
     - name: nginx
       image: nginx
 
-      env:
-        - name: course
-          value: "devops"
-        - name: trainer
-          value: "Matthews"
-        - name: duration
-          value: "5 weeks"  
+  env:
+    - name: course
+      value: "devops"
+    - name: trainer
+      value: "Matthews"
+    - name: duration
+      value: "5 weeks"  
