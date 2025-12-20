@@ -2,7 +2,7 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: environment
-  spec:
+spec:
   containers:
     - name: nginx
       image: nginx
