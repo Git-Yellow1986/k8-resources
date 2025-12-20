@@ -13,4 +13,4 @@ spec:
       - name: trainer
         value: "Matthews"
       - name: duration
-      value: "5 weeks"  
+        value: "5 weeks"  
