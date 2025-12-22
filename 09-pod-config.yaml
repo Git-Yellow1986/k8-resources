@@ -5,7 +5,9 @@ metadata:
   name: pod-config
 spec:
   containers:
-    - env:
+  - name: nginx
+    image: nginx
+    env:
         - name: course
           valueFrom:
             configMapKeyRef:
@@ -16,5 +18,4 @@ spec:
             configMapKeyRef:
               key: duration
               name: nginx-config
-      image: nginx
-      name: nginx
+   
