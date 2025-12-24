@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:mainline-alpine3.23-perl 
+        image: nginx:latest
 ---
 apiVersion: v1
 kind: Service
