@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels: # these are replica set labels
+    app: naginx
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: 30
+  selector:
+  # must match the pod template labels
+    matchLabels:
+      app: naginx
+      tier: frontend
+  # this is pod definition
+  template: # template is a blueprint for pods, these labels will be assigned to pods
+  # these labels must match the selector above, otherwise pods will not be managed by this replicaset
+  # these labels belong to pods
+    metadata:
+      labels:
+        app: naginx 
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:mainline-alpine-perl 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    app: naginx
+    tier: frontend
+  ports:
+    - name: nginx-svc-ports
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  
