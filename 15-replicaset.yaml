@@ -5,12 +5,10 @@ metadata:
   labels: # these are replica set labels
     app: naginx
     tier: frontend
-spec:
-  # modify replicas according to your case
+  spec: # modify replicas according to your case
   replicas: 3
-  selector:
-  # must match the pod template labels
-    matchLabels:
+  selector:  # must match the pod template labels
+     matchLabels:
       app: naginx
       tier: frontend
   # this is pod definition
